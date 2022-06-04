@@ -1,0 +1,14 @@
+pandas
+json
+glob
+pathlib
+openpyxl
+datetime
+numpy
+matplotlib
+skimage
+smtplib
+sys
+string
+commands
+tempfile
