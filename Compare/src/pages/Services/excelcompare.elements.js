@@ -46,7 +46,7 @@ export const ServiceContainer = styled.div`
 export const ServiceCard = styled(Link)`
   background: whitesmoke;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
-  width: 200px;
+  width: 400px;
   height: 300px;
   text-decoration: none;
   border-radius: 4px;
@@ -84,8 +84,8 @@ export const ServiceCardIcon = styled.div`
 `;
 
 export const ServiceCardPlan = styled.h3`
-  margin-bottom: 5px;
-  font-size: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
   font-family : 'Courier New', Courier, monospace;
   color: grey;
   

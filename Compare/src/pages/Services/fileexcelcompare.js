@@ -47,7 +47,7 @@ import {
       // });
   
       axios
-        .post("http://localhost:5000/fileexcelcompare", data, {
+        .post("http://localhost:5000/singleUpload", data, {
           method: "GET",
           responseType: "blob",
         })
@@ -72,7 +72,7 @@ import {
         
       <Box sx={{ marginTop: '11rem', marginLeft: '29rem' }}>
            <div>
-            <h2>
+            <h2 style={{marginBottom : '2rem'}}>
               One to One File Comparsion
             </h2>
             <h3>
@@ -83,14 +83,14 @@ import {
         <Box>
         <Button sx={{ mt: 3, mb: 2 }} variant="contained" component="label">
             Select first file
-            <input type="file" hidden name="file" onChange={handleChange}/>
+            <input type="file" hidden name="file1" onChange={handleChange}/>
         </Button> 
         <Button sx={{ mt: 3, mb: 2, marginLeft: '10rem' }} variant="contained" component="label">
             Select second file
-            <input type="file" hidden name="file" onChange={handleChange1}/>
+            <input type="file" hidden name="file2" onChange={handleChange1}/>
         </Button>       
         </Box>
-        <Box>
+        <Box sx={{    marginLeft: '7rem'}}>
         <Button
           type="submit"
           disabled= {filetype1 & filetype2 == '' ? true : false}
@@ -100,8 +100,7 @@ import {
             maxWidth: "500px"
             
           }}
-        >
-        -------------------------Start Compare-------------------------                   
+        >Start Compare              
           
         </Button>      
         </Box>  

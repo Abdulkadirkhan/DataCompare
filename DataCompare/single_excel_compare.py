@@ -7,8 +7,8 @@ import function_def as func
 from flask import Flask , request
 from flask_cors import CORS, cross_origin
 
-def compare():
-    print("Init result file ++++++++++++++++++++++++++++++++++++")
+def singleCompare(file1 , file2):
+    print("Init single result file ++++++++++++++++++++++++++++++++++++")
     flag = False
     result_file_name = "Result.xlsx"
     result_wb = Workbook()
@@ -18,10 +18,10 @@ def compare():
     for row_index in range(2, 3):
         print(f'Run: {row_index - 1}')
         print(f'Row Index: {row_index}')
-        file1_name = "Source3_GO"
-        file2_name = "Source3_O"
-        file1_path = f'{parent_dir}//golden_output//Source3_GO.xlsx'
-        file2_path = f'{parent_dir}//output//Source3_O.xlsx'
+        file1_name = file1
+        file2_name = file2
+        file1_path = f'{parent_dir}//golden_output//{file1_name}'
+        file2_path = f'{parent_dir}//output//{file2_name}'
         file1_sheet = load_workbook(file1_path).worksheets[0]
         file2_sheet = load_workbook(file2_path).worksheets[0]
         start_time = dt.datetime.now()
@@ -396,7 +396,7 @@ def deleteAllSheetsExcept(xlname):
 if __name__ == "__main__":
     start_time = dt.datetime.now()
     print("Excel Comparsion Start at: ",start_time)
-    compare()
+    singleCompare()
     end_time = dt.datetime.now
     print("Excel Comparsion End at: ", end_time)
     print("Total Comparsion time: ", str(dt.datetime.now() - start_time))

@@ -22,7 +22,7 @@ import {
 
 function Services() {
   return (
-    <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
+    <IconContext.Provider value={{ color: '#a9b3c1', size: 65 }}>
       <ServiceSection>
         <ServiceWrapper>
           <ServiceHeading>Select Service To Start</ServiceHeading>
